@@ -1,11 +1,11 @@
 <div class="card">
-    <div class="card-header bg-sucess text-white">
+    <div class="card-header bg-success text-white">
         <h4 class = "card-title">{{task.title}}</h4>
     </div>
     <div class="card-body bg-primary text-white">
         <p>{{task.description}}</p> 
         <hr>
-        <h3>{{task.task_time}}</h3>
+        <h3>{{task.task_date | date}}</h3>
         <hr>
         <h3>{{task.priority_level}}</h3>
         <hr>
