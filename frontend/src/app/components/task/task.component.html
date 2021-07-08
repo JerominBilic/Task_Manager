@@ -1,11 +1,15 @@
 <div class="card">
-    <div class="card-header bg-success text-white">
+    <div class="card-header text-light" [ngClass] = "{'bg-secondary': task.priority_level === 'low',
+     'bg-warning': task.priority_level === 'medium',
+      'bg-danger': task.priority_level === 'high'}">
         <h4 class = "card-title">{{task.title}}</h4>
     </div>
     <div class="card-body bg-primary text-white">
         <p>{{task.description}}</p> 
         <hr>
         <h3>{{task.task_date | date}}</h3>
+        <hr>
+        <h3>{{task.task_time | date: 'mediumTime'}}</h3>
         <hr>
         <h3>{{task.priority_level}}</h3>
         <hr>
@@ -14,6 +18,5 @@
         <h3>{{task.progress_level}}</h3>
     </div>
 </div>
-
 
 
